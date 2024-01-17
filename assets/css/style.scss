@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;;
+    color: white;
+    background: black;
+}
+
+.content {
+    &__score {
+        display: none;
+        pointer-events: none;
+        user-select: none;
+        position: absolute;
+        top: 5vh;
+        left: 5vh;
+        font-size: 4rem;
+    
+        &--show {
+            display: block;
+        }
+    }
+    
+    &__modal {
+        display: block;
+        pointer-events: none;
+        user-select: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000080;
+    
+        &__text {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around ;
+            line-height: 1.5;
+            
+            &__top {
+                &__name {
+                    font-size: 3rem;
+                }
+    
+                &__score {
+                    padding-top: 5vh;
+                    font-size: 2.4rem;
+                }
+            }
+    
+            &__click {
+                max-width: 80%;
+                padding-top: 30vh;
+                font-size: 1.5rem;
+                animation: blink 1200ms ease-in-out infinite alternate;
+            }
+        }
+    
+        &--hide {
+            display: none;
+        }
+    }
+}
+
+.fullscreen {
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    width: 2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 4rem;
+
+    &__icon {
+        &__top, &__bottom {
+            transition: transform 1s;
+            transform: translate(0, 0);
+        }
+    }
+
+    &--close {
+        .fullscreen__icon {
+            &__top{
+                transform: translate(-50%, 50%);
+            }
+
+            &__bottom{
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+}
+
+.stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 20px;
+  }
+
+@media only screen and (orientation: portrait) {
+    .content {
+        &__score {
+            font-size: 3rem;
+        }
+    
+        &__modal {
+            &__text {
+                &__top {
+                    &__name {
+                        font-size: 2.4rem;
+                    }
+    
+                    &__score {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .fullscreen {
+        height: 2.4rem;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}

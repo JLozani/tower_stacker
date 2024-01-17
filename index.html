@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tower Stacker</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <script type="module" src="./assets/js/import.js"></script>
+        <script src="./assets/js/tower_stacker.js"></script>
+        <script src="./assets/js/app.js"></script>
+    </head>
+    <body onload="init()">
+        <div class="content">
+            <p class="content__score"></p>
+            <div class="content__modal">
+                <div class="content__modal__text">
+                    <div class="content__modal__text__top">
+                        <h1 class="content__modal__text__top__name">Tower Stacker</h1>
+                        <p class="content__modal__text__top__score"></p>
+                    </div>
+                    <p class="content__modal__text__click">Click or tap to start!</p>
+                </div>
+            </div>
+        </div>
+        <svg class="fullscreen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.3 158.3">
+            <g class="fullscreen__icon">
+                <g class="fullscreen__icon__bottom">
+                    <line class="stroke" x1="12.45" y1="145.85" x2="65.29" y2="93.01"/>
+                    <path class="stroke" d="M30.85,123.11v37.7a8.36,8.36,0,0,0,8.34,8.34h37.7" transform="translate(-20.85 -20.85)"/>
+                </g>
+                <g class="fullscreen__icon__top">
+                    <line class="stroke" x1="145.85" y1="12.45" x2="93.01" y2="65.29"/>
+                    <path class="stroke" d="M169.15,76.89V39.19a8.36,8.36,0,0,0-8.34-8.34h-37.7" transform="translate(-20.85 -20.85)"/>
+                </g>
+            </g>
+        </svg>        
+    </body>
+</html>
